@@ -1,7 +1,77 @@
+$color01: #ccd5ae;
+$color02: #e9edc9;
+$color03: #fefae0;
+$color04: #faedcd;
+$color05: #d4a373;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    overflow-x: hidden;
+    overflow: initial;
+    font-family: 'Lucifer Sans Expanded' !important;
+}
+
 #header {
     display: flex;
+    padding: 1.2rem;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+    transition: ease-in-out 0.2s;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.3px);
+    -webkit-backdrop-filter: blur(7.3px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+    span {
+        font-size: 1.2rem;
+    }
+
+    nav {
+        animation: ease .5s ;
+    }
 
     ol {
         display: flex;
+        font-size: 1.2rem;
+        li {
+            a {
+                color: unset;
+                text-decoration: none;
+            }
+
+            &+li {
+                margin-left: .9rem;
+            }
+        }
     }
+}
+
+#first-section {
+    background: url(../assets/imgs/placeholder.png);
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-color: #fae4d8;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#second-section {
+    position: relative;
+    display: block;
+    background-color: white;
+    min-height: 100vh;
 }
